@@ -1,11 +1,11 @@
 namespace :cron do
   task :foo, [:column] => :environment do |task, args|
-    Cron::FooRunner.new(task).run
+    Foo.update_all(task)
   end
   task :bar, [:column] => :environment do |task, args|
-    Cron::BarRunner.new(task).run
+    Bar.update_all(task)
   end
   task :hoge, [:column] => :environment do |task, args|
-    Cron::HogeRunner.new(task).run
+    Hoge.update_all(task)
   end
 end
