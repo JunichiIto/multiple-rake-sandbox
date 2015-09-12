@@ -1,5 +1,4 @@
-require_relative 'process_checkable'
-include ProcessCheckable
+require_relative 'rake_helpers'
 
 namespace :bar do
   task :update_all, [:column] => :environment do |task, args|
